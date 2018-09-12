@@ -17,10 +17,7 @@ int main()
 		{
 			cout << "0";
 		}			
-		for(c=0;c<1;c++)
-		{
-			cout << "1";
-		}		
+		cout << "1";		
 		for(c=0;c<l;c++)
 		{
 			cout << "0";

@@ -1,2 +1,0 @@
-# Cpp
-Simple C++ Exercises

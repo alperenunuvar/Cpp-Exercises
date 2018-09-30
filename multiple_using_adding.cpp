@@ -9,7 +9,15 @@ int multiplication_r(int num, int i)
 	{
 		return 0;
 	}
-	return num+multiplication_r(num,i-1);
+	if(i>=0)
+	{		
+		return num+multiplication_r(num,i-1);
+	}
+	else
+	{
+		i*=-1;		
+		return (num+multiplication_r(num,i-1))*-1;
+	}	
 }
 
 //iterative
@@ -20,9 +28,21 @@ int multiplication(int num, int i)
 	int sum;
 
 	sum=0;
-	for(a=0;a<i;a++)
+	if(i>=0)
+	{		
+		for(a=0;a<i;a++)
+		{
+			sum+=num;
+		}
+	}
+	else
 	{
-		sum+=num;
+		i=i*-1;
+		for(a=0;a<i;a++)
+		{
+			sum+=num;
+		}
+		sum*=-1;
 	}
 	return sum;
 }
@@ -38,8 +58,8 @@ int main()
 	cout << "Enter second integer to multiplication = ";
 	cin >> number2;
 	//iterative
-	//cout << number1 << " x " << number2 << " = " << multiplication(number1, number2) << endl;
+	cout << "Iterative\n" << number1 << " x " << number2 << " = " << multiplication(number1, number2) << endl;
 	//recursion
-	cout << number1 << " x " << number2 << " = " << multiplication_r(number1, number2) << endl;
+	cout << "\nRecursion\n" << number1 << " x " << number2 << " = " << multiplication_r(number1, number2) << endl;
 	return 0;
 }

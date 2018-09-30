@@ -32,7 +32,6 @@ int main()
 	// Variables
 	int number1;
 	int number2;
-	int c;
 
 	cout << "Enter first integer to multiplication = ";
 	cin >> number1;

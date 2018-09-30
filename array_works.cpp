@@ -42,6 +42,16 @@ int main()
 		numbers[i] = rand()%101;
 		cout << numbers[i] << " ";
 	}
+	cout << "\nNumbers = ";
+	for(i=0;i<3;i++)
+	{
+		cout << numbers[i] << " "; 
+	}
+	cout << "\nRandom Order = ";
+	for(i=0;i<3;i++)
+	{
+		cout << numbers[rand()%3] << " ";
+	}
 	cout << endl;
 	return 0;
 }

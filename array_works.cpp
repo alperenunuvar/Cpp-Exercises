@@ -47,10 +47,10 @@ int main()
 	{
 		cout << numbers[i] << " "; 
 	}
-	cout << "\nRandom Order = ";
+	cout << "\nRandom Order = " << endl;
 	for(i=0;i<3;i++)
 	{
-		cout << numbers[rand()%3] << " ";
+		cout << "Numbers[" << rand()%3 << "]" << numbers[rand()%3] << " " << endl;
 	}
 	cout << endl;
 	return 0;

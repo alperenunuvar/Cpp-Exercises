@@ -11,7 +11,7 @@ int calculatePow(int num, int exponent)
 	total=1;
 	for(i=0;i<exponent;i++)
 	{
-		total=total*num;
+		total*=num;
 	}
 	return total;
 }

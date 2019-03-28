@@ -27,27 +27,20 @@ bool checkPalindrome(char *w, int wL)
 	// Variables
 	int halfIndex;
 	int i;
-	int counter;
+	bool isPalindrome;
 	
 	halfIndex=0;
-	counter=0;
-	halfIndex = wL/2;
+	halfIndex = wL/2;	
 	
 	for(i=0;i<halfIndex;i++)
 	{
-		if(w[i]==w[(wL-1)-i])
+		isPalindrome=true;
+		if(w[i]!=w[(wL-1)-i])
 		{
-			counter++;
+			isPalindrome=false;
 		}
 	}
-	if(wL/2==counter)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return isPalindrome;
 }
 
 int main()
